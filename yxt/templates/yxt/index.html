@@ -1,0 +1,123 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>云学堂大数据可视化系统</title>
+        <!-- 云学堂logo-->
+        <link rel="bookmark" type="image/x-icon" href="{% static 'yxt/images/yxt.ico' %}"/>
+        <link rel="shortcut icon" href="{% static 'yxt/images/yxt.ico' %}">
+        <link rel="icon" href="{% static 'yxt/images/yxt.ico' %}">
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link type="text/css" rel="stylesheet" href="{% static 'yxt/css/index.css' %}">
+        <!--Import google font css-->
+        <link type="text/css" rel="stylesheet" href="{% static 'yxt/css/google_font.css' %}">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="{% static 'yxt/css/materialize.min.css' %}"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="{% static 'yxt/css/material_icon.css' %}"  media="screen,projection"/>
+
+    </head>
+
+    <body>
+
+        <div>
+            <nav>
+                <div class="nav-wrapper teal accent-4">
+                    <a href="#!" class="brand-logo">云学堂大数据可视化系统</a>
+                </div>
+            </nav>
+
+            <div class="row">
+
+                <div class="col s12 m4 l2" id="side-nav-bar">
+                    <ul class="collapsible" data-collapsible="expandable" id="side-nav-bar-ul">
+
+                        {% for item in all_menus_list %}
+                            <li>
+                                <div class="collapsible-header waves-effect waves-teal active">{{ item.name }}</div>
+                                <div class="collapsible-body">
+                                    <ul class="collection" data-collapsible="expandable" id="{{ item.type }}">
+                                        {% for menu in item.menus %}
+                                            <a class="collection-item side-nav-bar-item" id="{{ menu.id }}"><p hidden>{{ menu.name }}</p>{{ menu.name_ch }}</a>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </li>
+                        {%  endfor %}
+
+                    </ul>
+                </div>
+
+                <div class="col s12 m8 l10" id="charts-content">
+                    <div class="row">
+
+                        <div class="col s12 m12 l12 card-panel hoverable chart-content-div">
+                            <div class="specific-chart-div" id="div1">
+                            </div>
+                        </div>
+
+                        <div class="col s12 m12 l12 card-panel hoverable chart-content-div">
+                            <div class="specific-chart-div" id="div2">
+                            </div>
+                        </div>
+
+                        <div class="col s12 m12 l12 card-panel hoverable chart-content-div">
+                            <div class="specific-chart-div" id="div3">
+                            </div>
+                        </div>
+
+                        <div class="col s12 m12 l12 card-panel hoverable chart-content-div">
+                            <div class="specific-chart-div" id="div4">
+                            </div>
+                        </div>
+
+                        <div class="col s12 m12 l12 card-panel hoverable chart-content-div">
+                            <div class="specific-chart-div" id="div5">
+                            </div>
+                        </div>
+
+                        <div class="col s12 m12 l12 card-panel hoverable chart-content-div">
+                            <div class="specific-chart-div" id="div6">
+                            </div>
+                        </div>
+
+                        <div class="col s12 m12 l12 card-panel hoverable chart-content-div">
+                            <div class="specific-chart-div" id="div7">
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l12 card-panel hoverable chart-content-div">
+                            <div class="specific-chart-div" id="div8" style="height: 550px">
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l12 card-panel hoverable chart-content-div">
+                            <div class="specific-chart-div" id="div9" style="height: 720px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Import date.js file-->
+        <script src="{% static 'yxt/js/date.js' %}" type="text/javascript"></script>
+        <!--Import amcharts js file-->
+        <script src="{% static 'yxt/amcharts/amcharts.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/amcharts/pie.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/amcharts/themes/light.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/amcharts/serial.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/amcharts/funnel.js' %}" type="text/javascript"></script>
+        <!--Import jQuery before materialize.js-->
+        <script src="{% static 'yxt/js/jquery-1.11.3.min.js' %}" type="text/javascript"></script>
+        <!--Import js.cookie.js file -->
+        <script src="{% static 'yxt/js/cookie/js.cookie.js' %}" type="text/javascript"></script>
+        <!--Import materizlize framework js files-->
+        <script src="{% static 'yxt/js/materialize.min.js' %}" type="text/javascript"></script>
+        <!-- Import show charts script -->
+        <script src="{% static 'yxt/js/yxt/createcharts.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/js/yxt/showchats.js' %}" type="text/javascript"></script>
+
+    </body>
+
+</html>

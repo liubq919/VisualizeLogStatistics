@@ -1,0 +1,413 @@
+{
+    "lecai": {
+        "type": "乐才",
+        "ApiPer": {
+            "id": "lecai1",
+            "name": "API调用统计",
+            "charts": [
+                {
+                    "divID": "div1",
+                    "ajaxURL": "/lecai/all_api_info/",
+                    "postData": {
+                        "type": "1"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "api",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div2",
+                    "ajaxURL": "/lecai/all_api_info/",
+                    "postData": {
+                        "type": "2"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "api",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div3",
+                    "ajaxURL": "/lecai/all_api_info/",
+                    "postData": {
+                        "type": "3"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "api",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div4",
+                    "ajaxURL": "/lecai/all_api_info/",
+                    "postData": {
+                        "type": "4"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "api",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div5",
+                    "ajaxURL": "/lecai/all_api_info/",
+                    "postData": {
+                        "type": "5"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "api",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div6",
+                    "ajaxURL": "/lecai/all_api_info/",
+                    "postData": {
+                        "type": "6"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "api",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div7",
+                    "ajaxURL": "/lecai/all_api_info/",
+                    "postData": {
+                        "type": "7"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "api",
+                        "valueField": "counter"
+                    }
+                }
+            ]
+        },
+        "ApiCount": {
+            "id": "lecai2",
+            "name": "API调用时段分布",
+            "charts": [
+                {
+                    "divID": "div9",
+                    "ajaxURL": "/lecai/index_ery_fif_min_ai_ajax_week_in_per_chart/",
+                    "postData": {
+                        "type": "1"
+                    },
+                    "graphInfo": {
+                        "type": "curve7",
+                        "title": "",
+                        "categoryAxis_title": "时间",
+                        "valueAxes_unit": "次"
+                    }
+                }
+            ]
+        },
+        "ApiCountPerDay": {
+            "id": "lecai3",
+            "name": "API调用日统计",
+            "charts": [
+                {
+                    "divID": "div9",
+                    "ajaxURL": "/lecai/index_api_called_day_by_day/",
+                    "postData": {
+                        "type": "1"
+                    },
+                    "graphInfo": {
+                        "type": "serial",
+                        "title": "",
+                        "categoryAxis_title": "时间",
+                        "valueAxes_unit": "次"
+                    }
+                }
+            ]
+        },
+        "LoginCount": {
+            "id": "lecai4",
+            "name": "登陆时段分布",
+            "charts": [
+                {
+                    "divID": "div9",
+                    "ajaxURL": "/lecai/index_ery_fif_login_count_ajax_week_in_per_chart/",
+                    "postData": {
+                        "type": "1"
+                    },
+                    "graphInfo": {
+                        "type": "curve7",
+                        "title": "",
+                        "categoryAxis_title": "时间",
+                        "valueAxes_unit": "次"
+                    }
+                }
+            ]
+        },
+        "LoginCountPerDay": {
+            "id": "lecai5",
+            "name": "登陆日统计",
+            "charts": [
+                {
+                    "divID": "div9",
+                    "ajaxURL": "/lecai/index_login_count_day_by_day/",
+                    "postData": {
+                        "type": "1"
+                    },
+                    "graphInfo": {
+                        "type": "serial",
+                        "title": "",
+                        "categoryAxis_title": "时间",
+                        "valueAxes_unit": "次"
+                    }
+                }
+            ]
+        }
+    },
+    "qida": {
+        "type": "企大",
+        "OSPer": {
+            "id": "qida1",
+            "name": "客户端分布统计",
+            "charts": [
+                {
+                    "divID": "div1",
+                    "ajaxURL": "/qida/qida_os_info/",
+                    "postData": {
+                        "type": "1"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "os",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div2",
+                    "ajaxURL": "/qida/qida_os_info/",
+                    "postData": {
+                        "type": "2"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "os",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div3",
+                    "ajaxURL": "/qida/qida_os_info/",
+                    "postData": {
+                        "type": "3"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "os",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div4",
+                    "ajaxURL": "/qida/qida_os_info/",
+                    "postData": {
+                        "type": "4"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "os",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div5",
+                    "ajaxURL": "/qida/qida_os_info/",
+                    "postData": {
+                        "type": "5"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "os",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div6",
+                    "ajaxURL": "/qida/qida_os_info/",
+                    "postData": {
+                        "type": "6"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "os",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div7",
+                    "ajaxURL": "/qida/qida_os_info/",
+                    "postData": {
+                        "type": "7"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "os",
+                        "valueField": "counter"
+                    }
+                }
+            ]
+        },
+        "LoginCount": {
+            "id": "qida2",
+            "name": "登陆时段分布",
+            "charts": [
+                {
+                    "divID": "div9",
+                    "ajaxURL": "/qida/index_ery_fif_login_count_ajax_weekin_per_chart/",
+                    "postData": {
+                        "type": "1"
+                    },
+                    "graphInfo": {
+                        "type": "curve7",
+                        "title": "",
+                        "categoryAxis_title": "时间",
+                        "valueAxes_unit": "次"
+                    }
+                }
+            ]
+        },
+        "LoginCountPerDay": {
+            "id": "qida3",
+            "name": "登陆日统计",
+            "charts": [
+                {
+                    "divID": "div9",
+                    "ajaxURL": "/qida/index_login_count_day_by_day/",
+                    "postData": {
+                        "type": "1"
+                    },
+                    "graphInfo": {
+                        "type": "serial",
+                        "title": "",
+                        "categoryAxis_title": "时间",
+                        "valueAxes_unit": "次"
+                    }
+                }
+            ]
+        },
+        "BrowserPer": {
+            "id": "qida4",
+            "name": "浏览器分布统计",
+            "charts": [
+                {
+                    "divID": "div1",
+                    "ajaxURL": "/qida/qida_browser_per/",
+                    "postData": {
+                        "type": "1"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "browser",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div2",
+                    "ajaxURL": "/qida/qida_browser_per/",
+                    "postData": {
+                        "type": "2"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "browser",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div3",
+                    "ajaxURL": "/qida/qida_browser_per/",
+                    "postData": {
+                        "type": "3"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "browser",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div4",
+                    "ajaxURL": "/qida/qida_browser_per/",
+                    "postData": {
+                        "type": "4"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "browser",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div5",
+                    "ajaxURL": "/qida/qida_browser_per/",
+                    "postData": {
+                        "type": "5"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "browser",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div6",
+                    "ajaxURL": "/qida/qida_browser_per/",
+                    "postData": {
+                        "type": "6"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "browser",
+                        "valueField": "counter"
+                    }
+                },
+                {
+                    "divID": "div7",
+                    "ajaxURL": "/qida/qida_browser_per/",
+                    "postData": {
+                        "type": "7"
+                    },
+                    "graphInfo": {
+                        "type": "pie",
+                        "title": "",
+                        "titleField": "browser",
+                        "valueField": "counter"
+                    }
+                }
+            ]
+        }
+    }
+}

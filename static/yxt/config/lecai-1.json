@@ -1,0 +1,41 @@
+{
+    "name": "lecai-1",
+    "function": "create_pie_chart_lecai",
+    "chartsInfo": [
+     {
+        "divID": "chartdivYesterday",
+        "ajaxURL": "/lecai/all_api_info/",
+        "type": "1"
+      },
+      {
+        "divID": "chartdivTwoDaysBefore",
+        "ajaxURL": "/lecai/all_api_info/",
+        "type": "2"
+      },
+      {
+        "divID": "chartdivThreeDaysBefore",
+        "ajaxURL": "/lecai/all_api_info/",
+        "type": "3"
+      },
+      {
+        "divID": "chartdivFourDaysBefore",
+        "ajaxURL": "/lecai/all_api_info/",
+        "type": "3"
+      },
+      {
+        "divID": "chartdivFiveDaysBefore",
+        "ajaxURL": "/lecai/all_api_info/",
+        "type": "5"
+      },
+      {
+        "divID": "chartdivSixDaysBefore",
+        "ajaxURL": "/lecai/all_api_info/",
+        "type": "6"
+      },
+      {
+        "divID": "chartdivSevenDaysBefore",
+        "ajaxURL": "/lecai/all_api_info/",
+        "type": "7"
+      }
+    ]
+}

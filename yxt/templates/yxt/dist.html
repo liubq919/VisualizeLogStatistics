@@ -1,0 +1,136 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>云学堂大数据可视化系统</title>
+        <!-- 云学堂logo-->
+        <link rel="bookmark" type="image/x-icon" href="{% static 'yxt/images/yxt.ico' %}"/>
+        <link rel="shortcut icon" href="{% static 'yxt/images/yxt.ico' %}">
+        <link rel="icon" href="{% static 'yxt/images/yxt.ico' %}">
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link type="text/css" rel="stylesheet" href="{% static 'yxt/css/index.css' %}">
+        <!--Import google font css-->
+        <link type="text/css" rel="stylesheet" href="{% static 'yxt/css/google_font.css' %}">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="{% static 'yxt/css/materialize.min.css' %}"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="{% static 'yxt/css/material_icon.css' %}"  media="screen,projection"/>
+
+    </head>
+
+    <body>
+
+        <div>
+            <nav>
+                <div class="nav-wrapper teal accent-4">
+                    <a href="#!" class="brand-logo">云学堂大数据可视化系统</a>
+                </div>
+            </nav>
+
+            <div class="row">
+                <div class="col s12 m4 l2" id="side-nav-bar">
+                    <ul class="collapsible" data-collapsible="expandable" id="side-nav-bar-ul">
+
+                        {% for item in all_menus_list %}
+                            <li>
+                                <div class="collapsible-header waves-effect waves-teal active">{{ item.name }}</div>
+                                <div class="collapsible-body">
+                                    <ul class="collection" data-collapsible="expandable" id="{{ item.type }}">
+                                        {% for menu in item.menus %}
+                                            <a class="collection-item side-nav-bar-item" id="{{ menu.id }}"><p hidden>{{ menu.name }}</p>{{ menu.name_ch }}</a>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </li>
+                        {%  endfor %}
+
+                    </ul>
+                </div>
+
+                <div class="col s12 m8 l10" id="charts-content">
+                    <div class="row">
+
+                        <div class="col s12 m12 l12 card-panel hoverable chart-content-div">
+                            <div class="map-chart-div">
+                                <div class="row">
+                                    <div class="col s12 m12 l8 map-provinces" id="mapProvinces1">
+                                    </div>
+                                    <div class="col s12 m12 l4 map-cities" id="mapCities1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s12 m12 l12 card-panel hoverable chart-content-div">
+                            <div class="map-chart-div">
+                                <div class="row">
+                                    <div class="col s12 m12 l8 map-provinces" id="mapProvinces2">
+                                    </div>
+                                    <div class="col s12 m12 l4 map-cities" id="mapCities2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s12 m12 l12 card-panel hoverable chart-content-div">
+                            <div class="map-chart-div">
+                                <div class="row">
+                                    <div class="col s12 m12 l8 map-provinces" id="mapProvinces3">
+                                    </div>
+                                    <div class="col s12 m12 l4 map-cities" id="mapCities3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Import jQuery before materialize.js-->
+        <script src="{% static 'yxt/js/jquery-1.11.3.min.js' %}" type="text/javascript"></script>
+        <!--Import js.cookie.js file -->
+        <script src="{% static 'yxt/js/cookie/js.cookie.js' %}" type="text/javascript"></script>
+        <!--Import materizlize framework js files-->
+        <script src="{% static 'yxt/js/materialize.min.js' %}" type="text/javascript"></script>
+        <!--Import eharts lib -->
+        <script src="{% static 'yxt/echarts/echarts.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/china.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/anhui.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/fujian.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/gansu.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/guangdong.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/guangxi.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/guizhou.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/hainan.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/hebei.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/heilongjiang.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/henan.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/hubei.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/hunan.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/jiangsu.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/jiangxi.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/jilin.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/liaoning.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/neimenggu.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/ningxia.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/qinghai.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/shandong.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/shaanxi.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/shanxi.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/sichuan.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/xicang.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/xinjiang.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/yunnan.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/echarts/maps/provinces/zhejiang.js' %}" type="text/javascript"></script>
+        <!--Import dist_map.js -->
+        <script src="{% static 'yxt/js/yxt/showChartsMap.js' %}" type="text/javascript"></script>
+        <script src="{% static 'yxt/js/yxt/createMapCharts.js' %}" type="text/javascript"></script>
+
+    </body>
+
+</html>

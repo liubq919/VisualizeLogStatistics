@@ -1,0 +1,65 @@
+{
+    "lecai": {
+        "type": "乐才",
+        "LoginDistInfo": {
+            "id": "lecai1",
+            "name": "登陆分布统计",
+            "charts": [
+                {
+                    "divID": [
+                        "mapProvinces1", "mapCities1"
+                    ],
+                    "ajaxURL":[
+                        "/lecai/index_login_distribution_provinces/",
+                        "/lecai/index_login_distribution_cities/"
+                    ],
+                    "postData": {
+                        "type": "1"
+                    },
+                    "graphInfo": {
+                        "type": "curve7",
+                        "title": "",
+                        "categoryAxis_title": "时间",
+                        "valueAxes_unit": "次"
+                    }
+                },
+                {
+                    "divID": [
+                        "mapProvinces2", "mapCities2"
+                    ],
+                    "ajaxURL":[
+                        "/lecai/index_login_distribution_provinces/",
+                        "/lecai/index_login_distribution_cities/"
+                    ],
+                    "postData": {
+                        "type": "2"
+                    },
+                    "graphInfo": {
+                        "type": "curve7",
+                        "title": "",
+                        "categoryAxis_title": "时间",
+                        "valueAxes_unit": "次"
+                    }
+                },
+                {
+                    "divID": [
+                        "mapProvinces3", "mapCities3"
+                    ],
+                    "ajaxURL":[
+                        "/lecai/index_login_distribution_provinces/",
+                        "/lecai/index_login_distribution_cities/"
+                    ],
+                    "postData": {
+                        "type": "3"
+                    },
+                    "graphInfo": {
+                        "type": "curve7",
+                        "title": "",
+                        "categoryAxis_title": "时间",
+                        "valueAxes_unit": "次"
+                    }
+                }
+            ]
+        }
+    }
+}
